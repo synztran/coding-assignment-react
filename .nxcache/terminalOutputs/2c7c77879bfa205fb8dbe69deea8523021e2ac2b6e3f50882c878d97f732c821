@@ -1,0 +1,43 @@
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mWebpack[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+asset main.js 8.79 KiB [emitted] [minimized] (name: main) 1 related asset
+asset assets/.gitkeep 0 bytes [emitted] [from: server/src/assets/.gitkeep] [copied]
+cacheable modules 14 KiB
+  modules by path ./server/src/users/*.ts 3.38 KiB
+    ./server/src/users/users.module.ts 616 bytes [built] [code generated]
+    + 2 modules
+  modules by path ./server/src/tickets/*.ts 8.98 KiB
+    ./server/src/tickets/tickets.module.ts 701 bytes [built] [code generated]
+    ./server/src/tickets/tickets.service.ts 3.01 KiB [built] [code generated]
+    ./server/src/tickets/tickets.controller.ts 5.29 KiB [built] [code generated]
+  ./server/src/main.ts 795 bytes [built] [code generated]
+  ./server/src/app/app.module.ts 532 bytes [built] [code generated]
+  ./server/src/utils/random-delay.ts 318 bytes [built] [code generated]
+modules by path external "@nestjs/ 84 bytes
+  external "@nestjs/common" 42 bytes [built] [code generated]
+  external "@nestjs/core" 42 bytes [built] [code generated]
+external "tslib" 42 bytes [built] [code generated]
+webpack 5.75.0 compiled successfully in 630 ms
+[36mType-checking in progress...[39m
+[32mNo errors found.[39m
+assets by status 0 bytes [cached] 1 asset
+asset main.js 8.87 KiB [emitted] [minimized] (name: main) 1 related asset
+cached modules 8.8 KiB [cached] 11 modules
+./server/src/tickets/tickets.controller.ts 5.47 KiB [built] [code generated]
+webpack 5.75.0 compiled successfully in 302 ms
+[31m[31m[1mERROR[22m[39m in [1m./server/src/tickets/tickets.controller.ts[22m:[32m[1m26:38[22m[39m
+[90mTS2554: [39mExpected 0 arguments, but got 1.
+  [0m [90m 24 |[39m 		[36mconst[39m completedFilter [33m=[39m[0m
+  [0m [90m 25 |[39m 			completed [33m!==[39m undefined [33m?[39m completed [33m===[39m [32m"true"[39m [33m:[39m undefined[33m;[39m[0m
+  [0m[31m[1m>[22m[39m[90m 26 |[39m 		[36mreturn[39m [36mthis[39m[33m.[39mticketsService[33m.[39mtickets(completedFilter)[33m;[39m[0m
+  [0m [90m    |[39m 		                                   [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 27 |[39m 	}[0m
+  [0m [90m 28 |[39m[0m
+  [0m [90m 29 |[39m 	[33m@[39m[33mGet[39m([32m":id"[39m)[0m
+[39m
+Found [31m[1m1 error[22m[39m in 320 ms.
+assets by status 0 bytes [cached] 1 asset
+asset main.js 8.93 KiB [emitted] [minimized] (name: main) 1 related asset
+cached modules 11.3 KiB [cached] 11 modules
+./server/src/tickets/tickets.service.ts 3.17 KiB [built] [code generated]
+webpack 5.75.0 compiled successfully in 202 ms
+[32mNo errors found.[39m

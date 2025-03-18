@@ -19,7 +19,10 @@
     "baseUrl": ".",
     "paths": {
       "@acme/shared-models": [
-        "shared-models/src/index.ts"
+        "shared-models/src/interface.ts"
+      ],
+      "@acme/shared-constants": [
+        "shared-models/src/constants.ts"
       ]
     }
   },

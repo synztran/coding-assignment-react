@@ -1,0 +1,79 @@
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mWebpack[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+
+[36m>[39m [7m[1m[36m NX [39m[22m[27m [1mWeb Development Server is listening at http://localhost:4200/[22m
+
+Entrypoint [1mmain[39m[22m = [1m[32mruntime.js[39m[22m [1m[32mvendor.js[39m[22m [1m[32mmain.css[39m[22m [1m[32mmain.js[39m[22m 4 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m 2 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m (main) 9.73 KiB (javascript) 65 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 166 KiB (javascript) 0 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 1.65 MiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.module.css[39m[22m (./client/src/app/app.module.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[0].use[2]!./client/src/app/app.module.css)
+[1mModule [1m[31mError[39m[22m[1m (from ./node_modules/postcss-loader/dist/cjs.js):
+Loading PostCSS "tailwindcss" plugin [1m[31mfailed[39m[22m[1m: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/postcss-loader/dist/utils.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/postcss-loader/dist/index.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/postcss-loader/dist/cjs.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/loader-runner/lib/loadLoader.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/loader-runner/lib/LoaderRunner.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/NormalModuleFactory.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/Compiler.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/webpack.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/index.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/@nrwl/webpack/src/executors/dev-server/dev-server.impl.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/nx/src/config/workspaces.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/nx/src/command-line/run.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/nx/bin/run-executor.js
+
+(@/Users/haritran/source/taste/coding-assignment-react/client/src/app/app.module.css)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/tickets.module.css[39m[22m (./client/src/app/tickets/tickets.module.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[0].use[2]!./client/src/app/tickets/tickets.module.css)
+[1mModule [1m[31mError[39m[22m[1m (from ./node_modules/postcss-loader/dist/cjs.js):
+Loading PostCSS "tailwindcss" plugin [1m[31mfailed[39m[22m[1m: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/postcss-loader/dist/utils.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/postcss-loader/dist/index.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/postcss-loader/dist/cjs.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/loader-runner/lib/loadLoader.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/loader-runner/lib/LoaderRunner.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/NormalModuleFactory.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/Compiler.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/webpack.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/index.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/@nrwl/webpack/src/executors/dev-server/dev-server.impl.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/nx/src/config/workspaces.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/nx/src/command-line/run.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/nx/bin/run-executor.js
+
+(@/Users/haritran/source/taste/coding-assignment-react/client/src/app/tickets/tickets.module.css)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/styles.css[39m[22m (./client/src/styles.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[8].use[2]!./client/src/styles.css)
+[1mModule [1m[31mError[39m[22m[1m (from ./node_modules/postcss-loader/dist/cjs.js):
+Loading PostCSS "tailwindcss" plugin [1m[31mfailed[39m[22m[1m: Cannot find module 'tailwindcss'
+Require stack:
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/postcss-loader/dist/utils.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/postcss-loader/dist/index.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/postcss-loader/dist/cjs.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/loader-runner/lib/loadLoader.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/loader-runner/lib/LoaderRunner.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/NormalModuleFactory.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/Compiler.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/webpack.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/webpack/lib/index.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/@nrwl/webpack/src/executors/dev-server/dev-server.impl.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/nx/src/config/workspaces.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/nx/src/command-line/run.js
+- /Users/haritran/source/taste/coding-assignment-react/node_modules/nx/bin/run-executor.js
+
+(@/Users/haritran/source/taste/coding-assignment-react/client/src/styles.css)[39m[22m
+
+webpack compiled with [1m[31m3 errors[39m[22m (5cbd4f7b32f355c9)
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 1.72 MiB (2.18 MiB) = [1m[32mruntime.js[39m[22m 47.6 KiB [1m[32mvendor.js[39m[22m 1.66 MiB [1m[32mmain.css[39m[22m 104 bytes [1m[32mmain.js[39m[22m 11.5 KiB 4 auxiliary assets
+Entrypoint [1mstyles[39m[22m 219 KiB (277 KiB) = [1m[32mruntime.js[39m[22m 47.6 KiB [1m[32mstyles.css[39m[22m 1 bytes [1m[32mstyles.js[39m[22m 172 KiB 2 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m (main) 9.73 KiB (javascript) 65 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 166 KiB (javascript) 0 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 1.65 MiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (b7760f06e8597ebb)

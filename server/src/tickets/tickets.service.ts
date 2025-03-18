@@ -1,81 +1,86 @@
-import { Injectable } from '@nestjs/common';
-import { Ticket } from '@acme/shared-models';
-import { UsersService } from '../users/users.service';
+import { Ticket } from "@acme/shared-models";
+import { Injectable } from "@nestjs/common";
+import { UsersService } from "../users/users.service";
 
 @Injectable()
 export class TicketsService {
-  /*
-   * In-memory storage so data is lost on server restart.
-   */
-  private storedTickets: Ticket[] = [
-    {
-      id: 1,
-      description: 'Install a monitor arm',
-      assigneeId: 1,
-      completed: false,
-    },
-    {
-      id: 2,
-      description: 'Move the desk to the new location',
-      assigneeId: 1,
-      completed: false,
-    },
-  ];
+	/*
+	 * In-memory storage so data is lost on server restart.
+	 */
+	private storedTickets: Ticket[] = [
+		{
+			id: 1,
+			description: "Install a monitor arm",
+			assigneeId: 1,
+			completed: false,
+		},
+		{
+			id: 2,
+			description: "Move the desk to the new location",
+			assigneeId: 1,
+			completed: false,
+		},
+	];
 
-  private nextId = 3;
+	private nextId = 3;
 
-  constructor(private usersService: UsersService) {}
+	constructor(private usersService: UsersService) {}
 
-  async tickets(): Promise<Ticket[]> {
-    return this.storedTickets;
-  }
+	async tickets(completed?: boolean): Promise<Ticket[]> {
+		if (completed === undefined) {
+			return this.storedTickets;
+		}
+		return this.storedTickets.filter(
+			(ticket) => ticket.completed === completed
+		);
+	}
 
-  async ticket(id: number): Promise<Ticket | null> {
-    return this.storedTickets.find((t) => t.id === id) ?? null;
-  }
+	async ticket(id: number): Promise<Ticket | null> {
+		return this.storedTickets.find((t) => t.id === id) ?? null;
+	}
 
-  async newTicket(payload: { description: string }): Promise<Ticket> {
-    const newTicket: Ticket = {
-      id: this.nextId++,
-      description: payload.description,
-      assigneeId: null,
-      completed: false,
-    };
+	async newTicket(payload: { description: string }): Promise<Ticket> {
+		const newTicket: Ticket = {
+			id: this.nextId++,
+			description: payload.description,
+			assigneeId: null,
+			completed: false,
+		};
 
-    this.storedTickets.push(newTicket);
+		this.storedTickets.push(newTicket);
 
-    return newTicket;
-  }
+		return newTicket;
+	}
 
-  async assign(ticketId: number, userId: number): Promise<boolean> {
-    const ticket = await this.ticket(ticketId);
-    const user = await this.usersService.user(userId);
+	async assign(ticketId: number, userId: number): Promise<boolean> {
+		const ticket = await this.ticket(ticketId);
+		const user = await this.usersService.user(userId);
 
-    if (ticket && user) {
-      ticket.assigneeId = +userId;
-      return true;
-    } else {
-      return false;
-    }
-  }
+		if (ticket && user) {
+			ticket.assigneeId = +userId;
+			return true;
+		} else {
+			return false;
+		}
+	}
 
-  async unassign(ticketId: number): Promise<boolean> {
-    const ticket = await this.ticket(ticketId);
-    if (ticket) {
-      ticket.assigneeId = null;
-      return true;
-    } else {
-      return false;
-    }
-  }
+	async unassign(ticketId: number): Promise<boolean> {
+		const ticket = await this.ticket(ticketId);
+		if (ticket) {
+			ticket.assigneeId = null;
+			return true;
+		} else {
+			return false;
+		}
+	}
 
-  async complete(ticketId: number, completed: boolean): Promise<boolean> {
-    const ticket = await this.ticket(ticketId);
-    if (ticket) {
-      ticket.completed = completed;
-      return true;
-    } else {
-      return false;
-    }
-  }
+	async complete(ticketId: number, completed: boolean): Promise<boolean> {
+		const ticket = await this.ticket(ticketId);
+		if (ticket) {
+			ticket.completed = completed;
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
